@@ -9,7 +9,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",
-        "https://vector-shift-gamma.vercel.app/",
+        "https://vector-shift-gamma.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
