@@ -5,7 +5,16 @@ from typing import List, Dict, Any
 from collections import deque
 
 app = FastAPI()
-app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:3000",
+        "https://vector-shift-gamma.vercel.app/",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 class Pipeline(BaseModel):
     nodes: List[Dict[str, Any]]
